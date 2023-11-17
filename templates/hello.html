@@ -9,14 +9,11 @@
 </head>
 <body>
 {#変数を埋め込む場合は{{  }}で囲む#}
-<h1>Hello, {{ city }}!</h1>
+<h1>My Tasks</h1>
 <ul>
-    <li>リスト1</li>
-    <li>リスト2</li>
-    <li>リスト3</li>
-    <li>リスト4</li>
-    <li>リスト5</li>
-    <li>リスト6</li>
+    {% for task in tasks %}
+        <li>{{ task }}</li>
+    {% endfor %}
 </ul>
 </body>
 </html>
