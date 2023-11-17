@@ -12,7 +12,11 @@
 <h1>My Tasks</h1>
 <ul>
     {% for task in tasks %}
-        <li>{{ task }}</li>
+        {# loop.indexはループのインデックスを取得。１始まりなのに注意#}
+        {% if loop.index % 3 > 0 %}
+            {# 3の倍数以外の要素を出力 #}
+            <li>{{ task }}</li>
+        {% endif %}
     {% endfor %}
 </ul>
 </body>
