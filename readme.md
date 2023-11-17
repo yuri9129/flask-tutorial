@@ -7,6 +7,12 @@ $env:FLASK_APP = "hello"
 $env:FLASK_ENV = "development"
 ```
 
+bashの場合
+```
+export FLASK_APP=hello
+export FLASK_ENV=development
+```
+
 # 実行
 ```
 flask run

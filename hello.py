@@ -3,7 +3,7 @@ from flask import render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello():
-    # templatesフォルダ内のhello.htmlを読み込む
-    return render_template('hello.html')
+@app.route('/japan/<city>')
+def hello(city):
+    # template側でcity変数を使えるようにする
+    return render_template('hello.html', city=city)
