@@ -1,0 +1,14 @@
+{# base.htmlを読み込む #}
+{% extends "base.html" %}
+
+{# base.htmlに定義したcontentブロックを定義 #}
+{% block content %}
+    <h1>編集</h1>
+    <form method="post">
+        <label for="title">タイトル</label>
+        <input type="text" name="title" id="title" value={{ post.title }}>
+        <label for="body">本文</label>
+        <input type="text" name="body" id="body" value={{ post.body }}>
+        <input type="submit" value="更新">
+    </form>
+{% endblock %}
