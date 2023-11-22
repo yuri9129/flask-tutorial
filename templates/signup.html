@@ -1,0 +1,14 @@
+{# base.htmlを読み込む #}
+{% extends "base.html" %}
+
+{# base.htmlに定義したcontentブロックを定義 #}
+{% block content %}
+    <h1>ユーザー登録</h1>
+    <form method="post">
+        <label for="username">ユーザー名</label>
+        <input type="text" name="username" id="username">
+        <label>本文</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="新規登録">
+    </form>
+{% endblock %}
